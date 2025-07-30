@@ -1,16 +1,46 @@
 import Input from "../../components/Input";
 import "./Category.css";
 
-const Category = () => {
+const Category = ({ handleChange }) => {
   return (
     <div>
       <h2 className="sidebar-title">Category</h2>
 
       <div>
-        <Input/>
-        <Input/>
-        <Input/>
-        <Input/>
+        <label className="sidebar-label-container">
+          <input type="radio" value="" name="test" onChange={handleChange} />
+          <span className="checkmart"></span>All
+        </label>
+
+        <Input
+          type="text"
+          handleChange={handleChange}
+          value="sneakers"
+          title="Sneakers"
+          name="test"
+        />
+        <Input
+          type="text"
+          handleChange={handleChange}
+          value="falts"
+          title="Falts"
+          name="test"
+        />
+        <Input
+          type="text"
+          handleChange={handleChange}
+          value="sandals"
+          title="Sandals"
+          name="test"
+        />
+
+        <Input
+          type="text"
+          handleChange={handleChange}
+          value="heels"
+          title="Heels"
+          name="test"
+        />
       </div>
     </div>
   );
